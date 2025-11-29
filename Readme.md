@@ -6,6 +6,6 @@ const handleSubmit = (e) => {
   const data = Object.fromEntries(formData);
   console.log(data);
   // reset form
-  e.currentTarget.reset();
+  e.target.reset();
 }
 ```
