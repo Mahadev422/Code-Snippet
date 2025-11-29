@@ -1,6 +1,6 @@
 {
-    status: true,
-    data: [
+    "status": true,
+    "data": [
         {"id": 1001, "name": "Emily Johnson"},
         {"id": 1002, "name": "Michael Chen"},
         {"id": 1003, "name": "Sarah Williams"},
