@@ -5,5 +5,7 @@ const handleSubmit = (e) => {
   const formData = new FormData(e.currentTarget)
   const data = Object.fromEntries(formData);
   console.log(data);
+  // reset form
+  e.currentTarget.reset();
 }
 ```
