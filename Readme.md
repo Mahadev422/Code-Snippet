@@ -10,6 +10,36 @@ const handleSubmit = (e) => {
 }
 ```
 ### React-router-dom
+**Router.jsx**
 ```js
-import { create
+import { createBrowserRouter } from "react-router-dom";
+import Login from "./Pages/Login";
+import App from "./App";
+import Register from "./pages/Register";
+
+export const Router = createBrowserRouter(
+  [
+    {path:'/', element: <App />, children: [
+      {path: 'profile', element: <></>}
+    ]},
+    {path: '/login', element: <Login />},
+    {path: '/register', element: <Register />}
+  ]
+);
+```
+**main.jsx**
+```js
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+
+import { RouterProvider } from 'react-router-dom';
+import { Router } from './Router.jsx';
+
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <RouterProvider router={Router} />
+  </StrictMode>,
+)
 ```
